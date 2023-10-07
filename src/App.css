@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Updated CSS for Calculator Styling */
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: cursive;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator {
+  max-width: 400px;
+  width: 105%;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #aaa;
+  background-color: #f0f0f0;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.display input {
+  width: 100%;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 0px 3px 0px #aaa;
+  margin-left: -8px;
+  height: 52px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add margin between button rows */
+}
+
+button {
+  flex: 1 1;
+    font-size: 24px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 4px;
+}
+/* Updated CSS to Align Placeholder Text to the Left */
+.display input::placeholder {
+  text-align: left;
+  color: #aaa; /* Adjust the color of the placeholder text */
+  font-size: 50px;
+  padding-top: 2px;
+  margin-top: 2px;
+}
+
+
+button:last-child {
+  margin-right: 0; /* Remove margin for the last button in a row */
+}
+
+button.clear {
+  background-color: #e74c3c;
+}
+
+button.calculate {
+  background-color: #27ae60;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
